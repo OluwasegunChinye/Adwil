@@ -11,7 +11,7 @@ const OnboardingScreen = () => {
                     backgroundColor: '#fff',
                     // image: <Image source={require('./images/circle.png')} />,
                     title: 'Onboarding',
-                    subtitle: 'Done with React Native Onboarding Swiper',
+                    subtitle: 'Kool',
                 },
                 {
                     backgroundColor: '#fff',
