@@ -1,4 +1,4 @@
-import { View } from 'react-native';
+import { Platform, View } from 'react-native';
 import { useCallback } from 'react';
 import { TailwindProvider } from 'tailwindcss-react-native';
 import { NavigationContainer } from '@react-navigation/native';
@@ -8,7 +8,12 @@ import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { Ionicons } from '@expo/vector-icons';
 
-import { FavouriteScreen, HomeScreen, OnboardingScreen } from './screens';
+import {
+    FavouriteScreen,
+    HomeScreen,
+    OnboardingScreen,
+    PreviewScreen,
+} from './screens';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -18,10 +23,10 @@ const Stack = createNativeStackNavigator();
 export function TabNavigator() {
     return (
         <Tab.Navigator
-            sceneContainerStyle={{ backgroundColor: 'transparent' }}
+            // sceneContainerStyle={{ backgroundColor: 'transparent' }}
             screenOptions={{
                 headerShown: false,
-                tabBarShowLabel: false,
+                // tabBarShowLabel: false,
             }}
         >
             <Tab.Screen
@@ -57,7 +62,7 @@ export function TabNavigator() {
 export default function App() {
     const [fontsLoaded] = useFonts({
         'poppins-bold': require('./assets/fonts/Poppins-Bold.ttf'),
-        'poppins': require('./assets/fonts/Poppins-Regular.ttf'),
+        poppins: require('./assets/fonts/Poppins-Regular.ttf'),
     });
 
     const onLayoutRootView = useCallback(async () => {
@@ -76,14 +81,35 @@ export default function App() {
                 <NavigationContainer>
                     <Stack.Navigator
                         screenOptions={{
-                            headerShown: false,
+                            headerShown: Platform.OS === 'android' ? false : '',
+                            headerTitle: false,
+                            headerStyle: {
+                                backgroundColor: 'yellow',
+                            },
+                            headerTintColor: 'red',
                         }}
                     >
                         <Stack.Screen
                             name="Onboarding"
                             component={OnboardingScreen}
                         />
-                        <Stack.Screen name="Tabs" component={TabNavigator} />
+                        <Stack.Screen
+                            name="Preview"
+                            component={PreviewScreen}
+                        />
+                        <Stack.Screen
+                            name="Tabs"
+                            component={TabNavigator}
+                            options={{
+                                title: 'welcome',
+                                headerTitleStyle: {
+                                    color: 'blue',
+                                },
+                                headerStyle: {
+                                    backgroundColor: 'green',
+                                },
+                            }}
+                        />
                     </Stack.Navigator>
                 </NavigationContainer>
             </TailwindProvider>
