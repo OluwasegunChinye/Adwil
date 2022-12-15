@@ -3,42 +3,42 @@ export const SONGS = [
         id: 1,
         title: 'A mighty fortress is our God',
         chorus: [],
-        scripture: [],
+        scripture: '',
         verses: [
             [
-                'A mighty fortress is our God',
-                'A bulwark never failing',
-                'Our helper, He amid the flood',
-                'Of mortal ills prevailing',
-                'For still our ancient foe',
-                'Doth seek to work us woe',
-                'His craft and power are great',
-                'And armed with cruel hate',
-                'On earth is not his equal',
+                'A mighty fortress is our God\n',
+                'A bulwark never failing\n',
+                'Our helper, He amid the flood\n',
+                'Of mortal ills prevailing\n',
+                'For still our ancient foe\n',
+                'Doth seek to work us woe\n',
+                'His craft and power are great\n',
+                'And armed with cruel hate\n',
+                'On earth is not his equal\n',
             ],
 
             [
-                'And though this world with devils filled',
-                'Should threaten to undo us',
-                'We will not fear, for God hath willed',
-                'His truth to triumph through us',
-                'The prince of darkness grim',
-                'We tremble not for him',
-                'His rage we can endure',
-                'For lo his doom is sure',
-                'One little word shall fail him',
+                'And though this world with devils filled\n',
+                'Should threaten to undo us\n',
+                'We will not fear, for God hath willed\n',
+                'His truth to triumph through us\n',
+                'The prince of darkness grim\n',
+                'We tremble not for him\n',
+                'His rage we can endure\n',
+                'For lo his doom is sure\n',
+                'One little word shall fail him\n',
             ],
 
             [
-                'Did we in our strength confide',
-                'Our striving world be losing',
-                'Were not the right man on our side',
-                'The man of God’s own choosing',
-                'You ask who that may be?',
-                'Christ Jesus it is He',
-                'Lord Sabaoth is His name',
-                'From age to age the same',
-                'And He will win the battle',
+                'Did we in our strength confide\n',
+                'Our striving world be losing\n',
+                'Were not the right man on our side\n',
+                'The man of God’s own choosing\n',
+                'You ask who that may be?\n',
+                'Christ Jesus it is He\n',
+                'Lord Sabaoth is His name\n',
+                'From age to age the same\n',
+                'And He will win the battle\n',
             ],
         ],
     },
@@ -46,15 +46,15 @@ export const SONGS = [
         id: 2,
         title: 'Abba Father',
         chorus: [],
-        scripture: [],
+        scripture: '',
         verses: [
             [
-                'ABBA,FATHER, bring about a change in me Master',
-                'Saviour, cleanse me from iniquity',
-                'Stretch forth Your Hand and make me whole',
-                'I stand awaiting the victory',
-                'O’er the kingdoms, the kingdoms',
-                'That war within my soul',
+                'ABBA,FATHER, bring about a change in me Master\n',
+                'Saviour, cleanse me from iniquity\n',
+                'Stretch forth Your Hand and make me whole\n',
+                'I stand awaiting the victory\n',
+                'O’er the kingdoms, the kingdoms\n',
+                'That war within my soul\n',
             ],
 
             [
@@ -81,22 +81,22 @@ export const SONGS = [
         id: 3,
         title: 'Above all power, above all kings',
         chorus: [
-            'Crucified. Laid behind a stone',
-            'You lived to die, rejected and alone',
-            'Like a rose, trampled on the ground',
-            'You took the fall and thought of me, above all',
+            'Crucified Laid behind a stone \n',
+            'You lived to die, rejected and alone\n',
+            'Like a rose, trampled on the ground\n',
+            'You took the fall and thought of me, above all\n',
         ],
-        scripture: [],
+        scripture: '',
         verses: [
             [
-                'Above all power, above all kings',
-                'Above all nature and all created things',
-                'Above all wisdom and all the ways of man',
-                'You were here before the world began',
-                'Above all kingdoms, above all thrones',
-                'Above all wonders the world has ever known',
-                'Above all wealth and treasures of the earth',
-                'There’s no way to measure what you’re worth',
+                'Above all power, above all kings\n',
+                'Above all nature and all created things\n',
+                'Above all wisdom and all the ways of man\n',
+                'You were here before the world began\n',
+                'Above all kingdoms, above all thrones\n',
+                'Above all wonders the world has ever known\n',
+                'Above all wealth and treasures of the earth\n',
+                'There’s no way to measure what you’re worth\n',
             ],
         ],
     },
@@ -104,7 +104,7 @@ export const SONGS = [
         id: 4,
         title: 'A MIGHTY FORTRESS IS OUR GOD',
         chorus: [],
-        scripture: [],
+        scripture: '',
         verses: [
             [
                 'A mighty fortress is our God',
@@ -147,19 +147,19 @@ export const SONGS = [
         id: 5,
         title: 'ABBA,FATHER',
         chorus: [],
-        scripture: [],
+        scripture: '',
         verses: [
             [
-                'ABBA,FATHER, bring about a change in me Master',
+                'ABBA,FATHER, bring about a change in me Master ',
                 'Saviour, cleanse me from iniquity',
-                'Stretch forth Your Hand and make me whole',
-                'I stand awaiting the victory',
-                'O’er the kingdoms, the kingdoms',
-                'That war within my soul',
+                'Stretch forth Your Hand and make me whole ',
+                'I stand awaiting the victory ',
+                ' O er the kingdoms, the kingdoms ',
+                'That war within my soul ',
             ],
 
             [
-                'Jesus, Jesus, arouse me from my darkened sleep',
+                'Jesus, Jesus, arouse me from my darkened sleep ',
                 'Glorious Messiah, cry unto me as deep cries unto deep',
                 'I seek your life and not my own',
                 'I praise You now for the victory',
@@ -187,7 +187,7 @@ export const SONGS = [
             'Like a rose, trampled on the ground',
             'You took the fall and thought of me, above all',
         ],
-        scripture: [],
+        scripture: '',
         verses: [
             [
                 'Above all power, above all kings',
@@ -205,7 +205,7 @@ export const SONGS = [
         id: 7,
         title: 'A MIGHTY FORTRESS IS OUR GOD',
         chorus: [],
-        scripture: [],
+        scripture: '',
         verses: [
             [
                 'A mighty fortress is our God',
@@ -248,7 +248,7 @@ export const SONGS = [
         id: 8,
         title: 'ABBA,FATHER',
         chorus: [],
-        scripture: [],
+        scripture: '',
         verses: [
             [
                 'ABBA,FATHER, bring about a change in me Master',
@@ -288,7 +288,7 @@ export const SONGS = [
             'Like a rose, trampled on the ground',
             'You took the fall and thought of me, above all',
         ],
-        scripture: [],
+        scripture: '',
         verses: [
             [
                 'Above all power, above all kings',
@@ -306,7 +306,7 @@ export const SONGS = [
         id: 10,
         title: 'A MIGHTY FORTRESS IS OUR GOD',
         chorus: [],
-        scripture: [],
+        scripture: '',
         verses: [
             [
                 'A mighty fortress is our God',
@@ -349,7 +349,7 @@ export const SONGS = [
         id: 11,
         title: 'ABBA,FATHER',
         chorus: [],
-        scripture: [],
+        scripture: '',
         verses: [
             [
                 'ABBA,FATHER, bring about a change in me Master',
@@ -389,7 +389,7 @@ export const SONGS = [
             'Like a rose, trampled on the ground',
             'You took the fall and thought of me, above all',
         ],
-        scripture: [],
+        scripture: '',
         verses: [
             [
                 'Above all power, above all kings',

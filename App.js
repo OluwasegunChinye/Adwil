@@ -14,6 +14,7 @@ import {
     OnboardingScreen,
     PreviewScreen,
 } from './screens';
+import FavouritesProvider from './store/context/favourite-context';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -62,7 +63,7 @@ export function TabNavigator() {
 export default function App() {
     const [fontsLoaded] = useFonts({
         'poppins-bold': require('./assets/fonts/Poppins-Bold.ttf'),
-        poppins: require('./assets/fonts/Poppins-Regular.ttf'),
+        'poppins': require('./assets/fonts/Poppins-Regular.ttf'),
     });
 
     const onLayoutRootView = useCallback(async () => {
@@ -78,40 +79,50 @@ export default function App() {
     return (
         <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
             <TailwindProvider>
-                <NavigationContainer>
-                    <Stack.Navigator
-                        screenOptions={{
-                            headerShown: Platform.OS === 'android' ? false : '',
-                            headerTitle: false,
-                            headerStyle: {
-                                backgroundColor: 'yellow',
-                            },
-                            headerTintColor: 'red',
-                        }}
-                    >
-                        <Stack.Screen
-                            name="Onboarding"
-                            component={OnboardingScreen}
-                        />
-                        <Stack.Screen
-                            name="Preview"
-                            component={PreviewScreen}
-                        />
-                        <Stack.Screen
-                            name="Tabs"
-                            component={TabNavigator}
-                            options={{
-                                title: 'welcome',
-                                headerTitleStyle: {
-                                    color: 'blue',
-                                },
+                <FavouritesProvider>
+                    <NavigationContainer>
+                        <Stack.Navigator
+                            screenOptions={{
+                                headerShown:
+                                    Platform.OS === 'android' ? false : '',
+                                headerTitle: '',
                                 headerStyle: {
-                                    backgroundColor: 'green',
+                                    backgroundColor: '#6874E8',
                                 },
+                                headerTintColor: 'white',
                             }}
-                        />
-                    </Stack.Navigator>
-                </NavigationContainer>
+                        >
+                            <Stack.Screen
+                                name="Onboarding"
+                                component={OnboardingScreen}
+                            />
+                            <Stack.Screen
+                                name="Preview"
+                                component={PreviewScreen}
+                                options={{
+                                    presentation: 'modal',
+                                    headerShown: true,
+                                    headerStyle: {
+                                        backgroundColor: '#6874E8',
+                                    },
+                                }}
+                            />
+                            <Stack.Screen
+                                name="Tabs"
+                                component={TabNavigator}
+                                options={{
+                                    title: '',
+                                    headerTitleStyle: {
+                                        color: 'blue',
+                                    },
+                                    headerStyle: {
+                                        backgroundColor: '#6874E8',
+                                    },
+                                }}
+                            />
+                        </Stack.Navigator>
+                    </NavigationContainer>
+                </FavouritesProvider>
             </TailwindProvider>
         </View>
     );
