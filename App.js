@@ -28,17 +28,19 @@ export function TabNavigator() {
             screenOptions={{
                 headerShown: false,
                 // tabBarShowLabel: false,
+                // headerShown: Platform.OS === 'android' ? false : '',
             }}
         >
             <Tab.Screen
                 name="Home"
                 component={HomeScreen}
                 options={{
+                    tabBarLabel: 'Songs',
                     tabBarIcon: ({ focused, color, size }) => (
                         <Ionicons
                             name="ios-book"
-                            size={size}
-                            color={focused ? 'red' : 'grey'}
+                            size={20}
+                            color={focused ? '#030622' : 'grey'}
                         />
                     ),
                 }}
@@ -50,8 +52,8 @@ export function TabNavigator() {
                     tabBarIcon: ({ focused, color, size }) => (
                         <Ionicons
                             name="heart-sharp"
-                            size={size}
-                            color={focused ? 'red' : 'grey'}
+                            size={20}
+                            color={focused ? '#030622' : 'grey'}
                         />
                     ),
                 }}
@@ -63,7 +65,7 @@ export function TabNavigator() {
 export default function App() {
     const [fontsLoaded] = useFonts({
         'poppins-bold': require('./assets/fonts/Poppins-Bold.ttf'),
-        'poppins': require('./assets/fonts/Poppins-Regular.ttf'),
+        poppins: require('./assets/fonts/Poppins-Regular.ttf'),
     });
 
     const onLayoutRootView = useCallback(async () => {
@@ -87,7 +89,7 @@ export default function App() {
                                     Platform.OS === 'android' ? false : '',
                                 headerTitle: '',
                                 headerStyle: {
-                                    backgroundColor: '#6874E8',
+                                    backgroundColor: '#030622',
                                 },
                                 headerTintColor: 'white',
                             }}

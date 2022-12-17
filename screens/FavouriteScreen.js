@@ -1,12 +1,12 @@
-import { View, Text, FlatList } from 'react-native';
+import { View, Text, FlatList, SafeAreaView } from 'react-native';
 import React, { useContext } from 'react';
-import { SafeAreaView } from 'react-native-safe-area-context';
 
 import Cards from '../components/Cards';
 import { FavouritesContext } from '../store/context/favourite-context';
 import { SONGS } from '../data/Songs';
+import Animation from '../components/Animation';
 
-const FavouriteScreen = ({navigation}) => {
+const FavouriteScreen = ({ navigation }) => {
     const favouriteSongCtx = useContext(FavouritesContext);
 
     const favouriteSongs = SONGS.filter((songs) =>
@@ -15,18 +15,21 @@ const FavouriteScreen = ({navigation}) => {
 
     if (favouriteSongs.length === 0) {
         return (
-            <View className='flex-1 items-center'>
-                <Text>Nothing here </Text>
+            <View className="flex-1 items-center">
+                <Text>nothing here tho</Text>
             </View>
-        )
+            // <Animation />
+        );
     }
 
     return (
         <SafeAreaView>
-            <View>
-
+            <View className="flex-1 items-center h-10">
+                <Text className="mt-2 font-[poppins]">
+                    Your favourite songs
+                </Text>
             </View>
-            <View>
+            <View className=" flex-1">
                 <FlatList
                     data={favouriteSongs}
                     keyExtractor={(item) => item.id}
