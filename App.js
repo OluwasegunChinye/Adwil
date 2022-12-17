@@ -27,8 +27,7 @@ export function TabNavigator() {
             // sceneContainerStyle={{ backgroundColor: 'transparent' }}
             screenOptions={{
                 headerShown: false,
-                // tabBarShowLabel: false,
-                // headerShown: Platform.OS === 'android' ? false : '',
+                tabBarLabelStyle: { color: '#6874E8' },
             }}
         >
             <Tab.Screen
@@ -40,7 +39,7 @@ export function TabNavigator() {
                         <Ionicons
                             name="ios-book"
                             size={20}
-                            color={focused ? '#030622' : 'grey'}
+                            color={focused ? '#6874E8' : 'grey'}
                         />
                     ),
                 }}
@@ -53,7 +52,7 @@ export function TabNavigator() {
                         <Ionicons
                             name="heart-sharp"
                             size={20}
-                            color={focused ? '#030622' : 'grey'}
+                            color={focused ? '#6874E8' : 'grey'}
                         />
                     ),
                 }}
@@ -113,10 +112,7 @@ export default function App() {
                                 name="Tabs"
                                 component={TabNavigator}
                                 options={{
-                                    title: '',
-                                    headerTitleStyle: {
-                                        color: 'blue',
-                                    },
+
                                     headerStyle: {
                                         backgroundColor: '#6874E8',
                                     },

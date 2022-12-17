@@ -5,8 +5,31 @@ import { SONGS } from '../data/Songs';
 import Cards from '../components/Cards';
 
 const HomeScreen = ({ navigation }) => {
-    const [text, setText] = useState();
-
+   const [search, setSearch] = useState('');
+   const [filteredDataSource, setFilteredDataSource] = useState(SONGS);
+    
+ const searchFilterFunction = (text) => {
+     // Check if searched text is not blank
+     if (text) {
+         // Inserted text is not blank
+         // Filter the masterDataSource and update FilteredDataSource
+         const newData = SONGS.filter(function (item) {
+             // Applying filter for the inserted text in search bar
+             const itemData = item.title
+                 ? item.title.toUpperCase()
+                 : ''.toUpperCase();
+             const textData = text.toUpperCase();
+             return itemData.indexOf(textData) > -1;
+         });
+         setFilteredDataSource(newData);
+         setSearch(text);
+     } else {
+         // Inserted text is blank
+         // Update FilteredDataSource with masterDataSource
+         setFilteredDataSource(SONGS);
+         setSearch(text);
+     }
+ };
     return (
         <>
             <SafeAreaView>
@@ -16,26 +39,28 @@ const HomeScreen = ({ navigation }) => {
                         keyboardType="default"
                         placeholder=" type here to search for songs"
                         placeholderTextColor={'grey'}
-                        onChangeText={setText}
-                        value={text}
-                        // autoCorrect="false"
+                        onChangeText={(text) => searchFilterFunction(text)}
+                        value={search}
+                        autoCorrect={false}
                     />
                 </View>
                 <View className="flex h-5/6">
                     <FlatList
-                        data={SONGS}
+                        data={filteredDataSource}
                         keyExtractor={(item) => item.id}
-                        renderItem={({ item }) => (
-                            <Cards
-                                title={item.title}
-                                number={item.id}
-                                onPress={function handlePreview() {
-                                    navigation.navigate('Preview', {
-                                        songId: item.id,
-                                    });
-                                }}
-                            />
-                        )}
+                        renderItem={({ item }) => {
+                            return (
+                                <Cards
+                                    title={item.title}
+                                    number={item.id}
+                                    onPress={function handlePreview() {
+                                        navigation.navigate('Preview', {
+                                            songId: item.id,
+                                        });
+                                    }}
+                                />
+                            );
+                        }}
                     />
                 </View>
             </SafeAreaView>
