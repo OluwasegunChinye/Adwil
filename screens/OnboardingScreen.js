@@ -21,7 +21,7 @@ const OnboardingScreen = () => {
                         />
                     ),
                     title: 'Songs of Praise & Worship',
-                    subtitle: 'by Adwil Media Services Publication',
+                    subtitle: '',
                 },
                 {
                     backgroundColor: '#030622',
@@ -31,7 +31,7 @@ const OnboardingScreen = () => {
                             className="w-72 h-72 object-contain"
                         />
                     ),
-                    title: 'Over 4,000',
+                    title: 'Over 400',
                     subtitle: 'Inspirational Praise and Worship Songs & Hymns',
                 },
                 {

@@ -45,13 +45,13 @@ const PreviewScreen = ({ route, navigation }) => {
     }, [navigation, favouriteSongHandler]);
 
     return (
-        <SafeAreaView>
+        <SafeAreaView className=''>
             <FlatList
                 data={previewSong}
                 keyExtractor={(item) => item.id}
                 renderItem={({ item }) => (
                     <View className="flex-1 items-center mt-5">
-                        <View className="">
+                        <View>
                             <Text className="font-[poppins-bold] my-5 ">
                                 {item.title}
                             </Text>
@@ -76,7 +76,21 @@ const PreviewScreen = ({ route, navigation }) => {
                                 {item.verses[4]}
                             </Text>
                             <Text className="font-[poppins] text-center mt-4">
-                                {item.verses[5]}
+                                {item.verses[5]} 
+                            </Text>
+                            <Text className="font-[poppins] text-center mt-2">
+                               {item.scripture} 
+                            </Text>
+                            <Text className="font-[poppins] text-[10px] text-center mt-4 mx-14">
+                                Compilation of the songs and hymns in this
+                                edition was done by Adwil Media Services
+                                Publication
+                            </Text>
+                            <Text className="font-[poppins-bold] text-[10px] text-center mx-14">
+                                &copy; Adwil Media Services 2012
+                            </Text>
+                            <Text className="font-[poppins] text-[10px] text-center mt-2 mx-14">
+                                App built & designed by 
                             </Text>
                         </View>
                     </View>
