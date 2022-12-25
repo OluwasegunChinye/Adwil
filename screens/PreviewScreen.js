@@ -63,10 +63,10 @@ const PreviewScreen = ({ route, navigation }) => {
                             <Text className="font-[poppins] text-center">
                                 {item.verses[0]}
                             </Text>
-                            <Text className="italic font-[poppins] text-center">
+                            <Text className="font-[poppins-italic] text-center italic text-neutral-600">
                                 {item.chorus}
                             </Text>
-                            <Text className="font-[poppins] text-center">
+                            <Text className="font-[poppins] text-center mt-4">
                                 {item.verses[1]}
                             </Text>
                             <Text className="font-[poppins] text-center mt-4">

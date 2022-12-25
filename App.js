@@ -65,6 +65,7 @@ export default function App() {
     const [fontsLoaded] = useFonts({
         'poppins-bold': require('./assets/fonts/Poppins-Bold.ttf'),
         'poppins': require('./assets/fonts/Poppins-Regular.ttf'),
+        'poppins-italic': require('./assets/fonts/Poppins-Italic.ttf')
     });
 
     const onLayoutRootView = useCallback(async () => {
