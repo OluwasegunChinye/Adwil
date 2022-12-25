@@ -81,7 +81,7 @@ export const SONGS = [
         id: '3',
         title: 'Above all power, above all kings',
         chorus: [
-            'Crucified. Laid behind a stone\n',
+            'Crucified, Laid behind a stone\n',
             'You lived to die, rejected and alone\n',
             'Like a rose, trampled on the ground\n',
             'You took the fall and thought of me, above all\n',
