@@ -16,19 +16,19 @@ const FavouriteScreen = ({ navigation }) => {
     if (favouriteSongs.length === 0) {
         return (
             <View className="mt-64">
-                <Animation message={'Oops! no favourite songs yet'} />
+                <Animation message={'Oops! You have no favourite songs'} />
             </View>
         );
     }
 
     return (
-        <SafeAreaView>
-            <View className="flex-1 items-center justify-center h-20 bg-[#6874E8]">
-                <Text className="mt-2 font-[poppins] text-sm ">
+        <SafeAreaView className=" bg-[#030622]">
+            <View className="flex-1 items-center justify-center h-1/6">
+                <Text className="mt-2 font-[poppins] text-lg text-white ">
                     Your favourite songs
                 </Text>
             </View>
-            <View className=" flex-1">
+            <View className="flex-1 h-5/6 ">
                 <FlatList
                     data={favouriteSongs}
                     keyExtractor={(item) => item.id}

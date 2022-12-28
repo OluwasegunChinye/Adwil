@@ -4,7 +4,7 @@ import React from 'react';
 const Cards = ({ onPress, title, number }) => {
     return (
         <TouchableOpacity onPress={onPress}>
-            <View className="flex flex-row w-full h-16 px-6 items-center  bg-[#030622]">
+            <View className="flex-1 flex-row w-full h-16 px-6 items-center  bg-[#030622] ">
                 <Text className="text-white text-xs font-[poppins-bold]">
                     {number}.
                 </Text>

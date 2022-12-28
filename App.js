@@ -27,7 +27,7 @@ export function TabNavigator() {
             // sceneContainerStyle={{ backgroundColor: 'transparent' }}
             screenOptions={{
                 headerShown: false,
-                tabBarLabelStyle: { color: '#6874E8' },
+                tabBarLabelStyle: { color: '#030622' },
             }}
         >
             <Tab.Screen
@@ -39,7 +39,7 @@ export function TabNavigator() {
                         <Ionicons
                             name="ios-book"
                             size={20}
-                            color={focused ? '#6874E8' : 'grey'}
+                            color={focused ? '#030622' : 'grey'}
                         />
                     ),
                 }}
@@ -52,7 +52,7 @@ export function TabNavigator() {
                         <Ionicons
                             name="heart-sharp"
                             size={20}
-                            color={focused ? '#6874E8' : 'grey'}
+                            color={focused ? '#030622' : 'grey'}
                         />
                     ),
                 }}
@@ -65,7 +65,7 @@ export default function App() {
     const [fontsLoaded] = useFonts({
         'poppins-bold': require('./assets/fonts/Poppins-Bold.ttf'),
         'poppins': require('./assets/fonts/Poppins-Regular.ttf'),
-        'poppins-italic': require('./assets/fonts/Poppins-Italic.ttf')
+        'poppins-italic': require('./assets/fonts/Poppins-Italic.ttf'),
     });
 
     const onLayoutRootView = useCallback(async () => {
@@ -105,7 +105,7 @@ export default function App() {
                                     presentation: 'modal',
                                     headerShown: true,
                                     headerStyle: {
-                                        backgroundColor: '#6874E8',
+                                        backgroundColor: '#030622',
                                     },
                                 }}
                             />
@@ -113,7 +113,6 @@ export default function App() {
                                 name="Tabs"
                                 component={TabNavigator}
                                 options={{
-
                                     headerStyle: {
                                         backgroundColor: '#6874E8',
                                     },

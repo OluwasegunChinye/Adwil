@@ -44,7 +44,7 @@ const HomeScreen = ({ navigation }) => {
                         autoCorrect={false}
                     />
                 </View>
-                <View className="flex h-5/6">
+                <View className="flex-1 bg-[#030622] h-5/6">
                     <FlatList
                         data={filteredDataSource}
                         keyExtractor={(item) => item.id}
