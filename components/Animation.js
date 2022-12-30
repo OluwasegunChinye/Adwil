@@ -5,7 +5,7 @@ import Lottie from 'lottie-react-native';
 const Animation = ({ message }) => {
     return (
         <View className="flex-1 items-center">
-            <Text className=" text-sm font-[poppins] text-[#6874E8]">
+            <Text className=" text-sm font-[poppins-bold] text-[#030622]">
                 {message}
             </Text>
             <Lottie

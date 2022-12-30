@@ -2837,6 +2837,7 @@ export const SONGS = [
                 'Jihova Jaa ya mma\n',
             ],
             [
+                '\n',
                 'Praise the lord, Praise the lor—d\n',
                 'Praise the lord, O ye praise Jehova\n',
                 'Praise the Lord\n',
@@ -2853,7 +2854,7 @@ export const SONGS = [
             [
                 'Everywhere people dwell\n',
                 'Praise the Lord\n',
-                'O ye praise Jehova\n',
+                'Oh! ye praise Jehova\n',
                 'Praise the Lord\n',
             ],
         ],

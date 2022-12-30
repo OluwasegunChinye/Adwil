@@ -89,8 +89,8 @@ const PreviewScreen = ({ route, navigation }) => {
                             <Text className="font-[poppins-bold] text-[10px] text-center ">
                                 &copy; Adwil Media Services
                             </Text>
-                            <Text className="font-[poppins] text-[10px] text-center mt-2 ">
-                                App built & designed by Bro Segun
+                            <Text className="font-[poppins] text-[10px] text-center ">
+                                App built & designed by nuges😎
                             </Text>
                         </View>
                     </View>
