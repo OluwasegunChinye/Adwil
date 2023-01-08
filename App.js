@@ -1,5 +1,5 @@
 import { Platform, View } from 'react-native';
-import { useCallback } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { TailwindProvider } from 'tailwindcss-react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -7,6 +7,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { Ionicons } from '@expo/vector-icons';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import {
     FavouriteScreen,
@@ -62,9 +63,22 @@ export function TabNavigator() {
 }
 
 export default function App() {
+    const [isFirstLaunched, setIsFirstLaunched] = useState(false);
+
+    useEffect(() => {
+        AsyncStorage.getItem('alreadyLaunched').then((value) => {
+            if (value === null) {
+                AsyncStorage.setItem('alreadyLaunched', 'true');
+                setIsFirstLaunched(true);
+            } else {
+                setIsFirstLaunched(false);
+            }
+        });
+    }, []);
+
     const [fontsLoaded] = useFonts({
         'poppins-bold': require('./assets/fonts/Poppins-Bold.ttf'),
-        'poppins': require('./assets/fonts/Poppins-Regular.ttf'),
+        poppins: require('./assets/fonts/Poppins-Regular.ttf'),
         'poppins-italic': require('./assets/fonts/Poppins-Italic.ttf'),
     });
 
@@ -94,9 +108,20 @@ export default function App() {
                                 headerTintColor: 'white',
                             }}
                         >
+                            {isFirstLaunched && (
+                                <Stack.Screen
+                                    name="Onboarding"
+                                    component={OnboardingScreen}
+                                />
+                            )}
                             <Stack.Screen
-                                name="Onboarding"
-                                component={OnboardingScreen}
+                                name="Tabs"
+                                component={TabNavigator}
+                                options={{
+                                    headerStyle: {
+                                        backgroundColor: '#6874E8',
+                                    },
+                                }}
                             />
                             <Stack.Screen
                                 name="Preview"
@@ -106,15 +131,6 @@ export default function App() {
                                     headerShown: true,
                                     headerStyle: {
                                         backgroundColor: '#030622',
-                                    },
-                                }}
-                            />
-                            <Stack.Screen
-                                name="Tabs"
-                                component={TabNavigator}
-                                options={{
-                                    headerStyle: {
-                                        backgroundColor: '#6874E8',
                                     },
                                 }}
                             />
