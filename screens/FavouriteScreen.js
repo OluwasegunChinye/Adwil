@@ -1,22 +1,29 @@
 import { View, Text, FlatList, SafeAreaView } from 'react-native';
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
 import Cards from '../components/Cards';
 import { FavouritesContext } from '../store/context/favourite-context';
 import { SONGS } from '../data/Songs';
 import Animation from '../components/Animation';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const FavouriteScreen = ({ navigation }) => {
     const favouriteSongCtx = useContext(FavouritesContext);
+
+    //Asyncstorage
 
     const favouriteSongs = SONGS.filter((songs) =>
         favouriteSongCtx.ids.includes(songs.id)
     );
 
+    console.log(favouriteSongs.length);
+
     if (favouriteSongs.length === 0) {
         return (
-            <View className="mt-64">
-                <Animation message={'Oops! You have no favourite songs'} />
+            <View className="flex-1 bg-[#030622]">
+                <View className="mt-64">
+                    <Animation message={'Oops! You have no favourite songs'} />
+                </View>
             </View>
         );
     }

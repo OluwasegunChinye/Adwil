@@ -5,11 +5,12 @@ import {
     FlatList,
     TouchableOpacity,
 } from 'react-native';
-import React, { useContext, useLayoutEffect } from 'react';
+import React, { useContext, useEffect, useLayoutEffect } from 'react';
 import { Ionicons } from '@expo/vector-icons';
 
 import { SONGS } from '../data/Songs';
 import { FavouritesContext } from '../store/context/favourite-context';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const PreviewScreen = ({ route, navigation }) => {
     const favouriteSongCtx = useContext(FavouritesContext);
