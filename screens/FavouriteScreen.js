@@ -1,22 +1,19 @@
 import { View, Text, FlatList, SafeAreaView } from 'react-native';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 
 import Cards from '../components/Cards';
 import { FavouritesContext } from '../store/context/favourite-context';
 import { SONGS } from '../data/Songs';
 import Animation from '../components/Animation';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const FavouriteScreen = ({ navigation }) => {
     const favouriteSongCtx = useContext(FavouritesContext);
-
-    //Asyncstorage
 
     const favouriteSongs = SONGS.filter((songs) =>
         favouriteSongCtx.ids.includes(songs.id)
     );
 
-    console.log(favouriteSongs.length);
+    console.log('no of songs :', favouriteSongs.length);
 
     if (favouriteSongs.length === 0) {
         return (

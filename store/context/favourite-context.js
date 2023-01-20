@@ -7,16 +7,21 @@ export const FavouritesContext = createContext({
     removeFavourite: (id) => {},
 });
 
-
 // the  above ☝🏽 objects/properties are added to only help with auto-completion
 
 function FavouritesProvider({ children }) {
-    const [favouriteSongIds, setFavouriteSongIds] = useState('');
+    const [favouriteSongIds, setFavouriteSongIds] = useState([]);
 
-    //Asyncstore
+    const savedSong = async () => {
+        await AsyncStorage.setItem(
+            'new_store',
+            JSON.stringify(favouriteSongIds)
+        );
+    };
 
     function addFavourite(id) {
         setFavouriteSongIds((currentFavIds) => [...currentFavIds, id]);
+        savedSong();
     }
 
     function removeFavourite(id) {
@@ -25,13 +30,28 @@ function FavouritesProvider({ children }) {
         );
     }
 
-    console.log(`store comp : ${favouriteSongIds}`);
+    //Asyncstore
+
+    const findId = async () => {
+        const result = await AsyncStorage.getItem('new_store');
+        console.log('saved id is  :', result);
+        if (result !== null) {
+            setFavouriteSongIds(JSON.parse(result));
+        } else if (result === null) {
+            return result === 0;
+        }
+    };
+
+    useEffect(() => {
+        findId();
+    }, []);
+
+    // end of asyncstorage
 
     const value = {
         ids: favouriteSongIds, // choice name to use in other components : prop name as it appears here
         addFavourite: addFavourite,
         removeFavourite: removeFavourite,
-        setFavouriteSongIds,
     };
 
     return (

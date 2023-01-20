@@ -88,7 +88,7 @@ export default function App() {
         console.log('cleared');
     };
 
-    clearAll();
+    // clearAll();
     
 
     const [fontsLoaded] = useFonts({
