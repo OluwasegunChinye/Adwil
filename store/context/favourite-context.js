@@ -12,16 +12,19 @@ export const FavouritesContext = createContext({
 function FavouritesProvider({ children }) {
     const [favouriteSongIds, setFavouriteSongIds] = useState([]);
 
-    const savedSong = async () => {
-        await AsyncStorage.setItem(
-            'new_store',
-            JSON.stringify(favouriteSongIds)
-        );
-    };
+    // const savedSong = async () => {
+    //     try {
+    //         await AsyncStorage.setItem(
+    //             'new_store',
+    //             JSON.stringify(favouriteSongIds)
+    //         );
+    //     } catch (error) {}
+    // };
 
-    function addFavourite(id) {
-        setFavouriteSongIds((currentFavIds) => [...currentFavIds, id]);
-        savedSong();
+    async function addFavourite(id) {
+        const updatedSongId = (currentFavIds) => [...currentFavIds, id];
+        setFavouriteSongIds(updatedSongId);
+        await AsyncStorage.setItem('new_store', JSON.stringify(updatedSongId));
     }
 
     function removeFavourite(id) {
@@ -30,15 +33,17 @@ function FavouritesProvider({ children }) {
         );
     }
 
-    //Asyncstore
+    //Asyncstore to read
 
     const findId = async () => {
-        const result = await AsyncStorage.getItem('new_store');
-        console.log('saved id is  :', result);
-        if (result !== null) {
-            setFavouriteSongIds(JSON.parse(result));
-        } else if (result === null) {
-            return result === 0;
+        try {
+            const result = await AsyncStorage.getItem('new_store');
+            console.log('saved id is  :', result);
+            if (result !== null) {
+                setFavouriteSongIds(JSON.parse(result));
+            }
+        } catch (error) {
+            console.log('error message', error);
         }
     };
 
