@@ -12,11 +12,46 @@ export const FavouritesContext = createContext({
 function FavouritesProvider({ children }) {
     const [favouriteSongIds, setFavouriteSongIds] = useState([]);
 
+<<<<<<< HEAD
     const findId = async () => {
         const result = await AsyncStorage.getItem('new_store');
         console.log('saved id is  :', result);
         if (result !== null) {
             setFavouriteSongIds(JSON.parse(result));
+=======
+    // const savedSong = async () => {
+    //     try {
+    //         await AsyncStorage.setItem(
+    //             'new_store',
+    //             JSON.stringify(favouriteSongIds)
+    //         );
+    //     } catch (error) {}
+    // };
+
+    async function addFavourite(id) {
+        const updatedSongId = (currentFavIds) => [...currentFavIds, id];
+        setFavouriteSongIds(updatedSongId);
+        await AsyncStorage.setItem('new_store', JSON.stringify(updatedSongId));
+    }
+
+    function removeFavourite(id) {
+        setFavouriteSongIds((currentFavIds) =>
+            currentFavIds.filter((songId) => songId !== id)
+        );
+    }
+
+    //Asyncstore to read
+
+    const findId = async () => {
+        try {
+            const result = await AsyncStorage.getItem('new_store');
+            console.log('saved id is  :', result);
+            if (result !== null) {
+                setFavouriteSongIds(JSON.parse(result));
+            }
+        } catch (error) {
+            console.log('error message', error);
+>>>>>>> 0423edf619c1db134f2bd4e39a0eb3bc6bff91ce
         }
     };
 
