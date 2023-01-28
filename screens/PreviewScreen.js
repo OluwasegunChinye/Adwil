@@ -19,7 +19,7 @@ const PreviewScreen = ({ route, navigation }) => {
 
     const previewSong = SONGS.filter((songItem) => songItem.id === songId);
 
-    const songIsFavourite = favouriteSongCtx.ids.includes(songId);
+    const songIsFavourite = favouriteSongCtx.favouriteSongIds.includes(songId);
 
     function favouriteSongHandler() {
         if (songIsFavourite) {

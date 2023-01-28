@@ -12,33 +12,11 @@ export const FavouritesContext = createContext({
 function FavouritesProvider({ children }) {
     const [favouriteSongIds, setFavouriteSongIds] = useState([]);
 
-    const savedSong = async () => {
-        await AsyncStorage.setItem(
-            'new_store',
-            JSON.stringify(favouriteSongIds)
-        );
-    };
-
-    function addFavourite(id) {
-        setFavouriteSongIds((currentFavIds) => [...currentFavIds, id]);
-        savedSong();
-    }
-
-    function removeFavourite(id) {
-        setFavouriteSongIds((currentFavIds) =>
-            currentFavIds.filter((songId) => songId !== id)
-        );
-    }
-
-    //Asyncstore
-
     const findId = async () => {
         const result = await AsyncStorage.getItem('new_store');
         console.log('saved id is  :', result);
         if (result !== null) {
             setFavouriteSongIds(JSON.parse(result));
-        } else if (result === null) {
-            return result === 0;
         }
     };
 
@@ -46,12 +24,31 @@ function FavouritesProvider({ children }) {
         findId();
     }, []);
 
-    // end of asyncstorage
+    async function addFavourite(id) {
+        setFavouriteSongIds((currentFavIds) => [...currentFavIds, id]);
+        await AsyncStorage.setItem(
+            'new_store',
+            JSON.stringify(favouriteSongIds)
+        );
+    }
+
+    async function removeFavourite(id) {
+        setFavouriteSongIds((currentFavIds) =>
+            currentFavIds.filter((songId) => songId !== id)
+        );
+        await AsyncStorage.setItem(
+            'new_store',
+            JSON.stringify(favouriteSongIds)
+        );
+    }
+
+    //Asyncstore
 
     const value = {
-        ids: favouriteSongIds, // choice name to use in other components : prop name as it appears here
+        favouriteSongIds, // choice name to use in other components : prop name as it appears here
         addFavourite: addFavourite,
         removeFavourite: removeFavourite,
+        setFavouriteSongIds,
     };
 
     return (

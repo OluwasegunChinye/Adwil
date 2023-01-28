@@ -5,31 +5,31 @@ import { SONGS } from '../data/Songs';
 import Cards from '../components/Cards';
 
 const HomeScreen = ({ navigation }) => {
-   const [search, setSearch] = useState('');
-   const [filteredDataSource, setFilteredDataSource] = useState(SONGS);
-    
- const searchFilterFunction = (text) => {
-     // Check if searched text is not blank
-     if (text) {
-         // Inserted text is not blank
-         // Filter the masterDataSource and update FilteredDataSource
-         const newData = SONGS.filter(function (item) {
-             // Applying filter for the inserted text in search bar
-             const itemData = item.title
-                 ? item.title.toUpperCase()
-                 : ''.toUpperCase();
-             const textData = text.toUpperCase();
-             return itemData.indexOf(textData) > -1;
-         });
-         setFilteredDataSource(newData);
-         setSearch(text);
-     } else {
-         // Inserted text is blank
-         // Update FilteredDataSource with masterDataSource
-         setFilteredDataSource(SONGS);
-         setSearch(text);
-     }
- };
+    const [search, setSearch] = useState('');
+    const [filteredDataSource, setFilteredDataSource] = useState(SONGS);
+
+    const searchFilterFunction = (text) => {
+        // Check if searched text is not blank
+        if (text) {
+            // Inserted text is not blank
+            // Filter the masterDataSource and update FilteredDataSource
+            const newData = SONGS.filter(function (item) {
+                // Applying filter for the inserted text in search bar
+                const itemData = item.title
+                    ? item.title.toUpperCase()
+                    : ''.toUpperCase();
+                const textData = text.toUpperCase();
+                return itemData.indexOf(textData) > -1;
+            });
+            setFilteredDataSource(newData);
+            setSearch(text);
+        } else {
+            // Inserted text is blank
+            // Update FilteredDataSource with masterDataSource
+            setFilteredDataSource(SONGS);
+            setSearch(text);
+        }
+    };
     return (
         <>
             <SafeAreaView>

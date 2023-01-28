@@ -14,6 +14,7 @@ import {
     HomeScreen,
     OnboardingScreen,
     PreviewScreen,
+    RefreshScreen,
 } from './screens';
 import FavouritesProvider from './store/context/favourite-context';
 
@@ -40,7 +41,7 @@ export function TabNavigator() {
                         <Ionicons
                             name="ios-book"
                             size={20}
-                            color={focused ? '#030622' : 'grey'}
+                            color={focused ? '#030622' : '#D2D2DA'}
                         />
                     ),
                 }}
@@ -53,7 +54,20 @@ export function TabNavigator() {
                         <Ionicons
                             name="heart-sharp"
                             size={20}
-                            color={focused ? '#030622' : 'grey'}
+                            color={focused ? '#030622' : '#D2D2DA'}
+                        />
+                    ),
+                }}
+            />
+            <Tab.Screen
+                name="Refresh App"
+                component={RefreshScreen}
+                options={{
+                    tabBarIcon: ({ focused, color, size }) => (
+                        <Ionicons
+                            name="reload-circle-sharp"
+                            size={20}
+                            color={focused ? '#030622' : '#D2D2DA'}
                         />
                     ),
                 }}
@@ -89,7 +103,6 @@ export default function App() {
     };
 
     // clearAll();
-    
 
     const [fontsLoaded] = useFonts({
         'poppins-bold': require('./assets/fonts/Poppins-Bold.ttf'),
