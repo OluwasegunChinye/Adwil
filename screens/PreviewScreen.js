@@ -64,7 +64,7 @@ const PreviewScreen = ({ route, navigation }) => {
                             <Text className="font-[poppins] text-center">
                                 {item.verses[0]}
                             </Text>
-                            <Text className="font-[poppins-italic] text-center italic text-neutral-600">
+                            <Text className="font-[poppins-italic] text-center italic text-[#DB5461]">
                                 {item.chorus}
                             </Text>
                             <Text className="font-[poppins] text-center mt-4">
@@ -82,7 +82,7 @@ const PreviewScreen = ({ route, navigation }) => {
                             <Text className="font-[poppins] text-center mt-4">
                                 {item.verses[5]}
                             </Text>
-                            <Text className="font-[poppins] text-[10px] text-center mt-4 mx-14">
+                            {/* <Text className="font-[poppins] text-[10px] text-center mt-4 mx-14">
                                 Compilation of the songs and hymns in this
                                 edition was done by Adwil Media Services
                                 Publication
@@ -92,11 +92,23 @@ const PreviewScreen = ({ route, navigation }) => {
                             </Text>
                             <Text className="font-[poppins] text-[10px] text-center ">
                                 App built & designed by nuges😎
-                            </Text>
+                            </Text> */}
                         </View>
                     </View>
                 )}
             />
+            <View className="flex-1 justify-end items-center mb-8">
+                <Text className="font-[poppins] text-[10px] text-center mt-4 mx-14">
+                    Compilation of the songs and hymns in this edition was done
+                    by Adwil Media Services Publication
+                </Text>
+                <Text className="font-[poppins-bold] text-[10px] text-center ">
+                    &copy; Adwil Media Services
+                </Text>
+                <Text className="font-[poppins] text-[10px] text-center ">
+                    App built & designed by nuges😎
+                </Text>
+            </View>
         </SafeAreaView>
     );
 };

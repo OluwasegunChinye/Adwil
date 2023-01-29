@@ -2,7 +2,7 @@ import { View, Text, TouchableOpacity, DevSettings, Alert } from 'react-native';
 import Lottie from 'lottie-react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const Refresh = ({ navigation }) => {
+const Refresh = () => {
     const handleRefresh = async () => {
         DevSettings.reload();
         await AsyncStorage.clear();
@@ -13,7 +13,7 @@ const Refresh = ({ navigation }) => {
     const displayRefreshAlert = () => {
         Alert.alert(
             'Are you sure?',
-            'This Action will clear up storage by reloading app afresh, saved favourites songs will be removed permanently',
+            'This Action will clear up storage by reloading the app afresh, saved favourites songs will also be cleared',
             [
                 {
                     text: 'Refresh',

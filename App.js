@@ -1,4 +1,4 @@
-import { Platform, View } from 'react-native';
+import { View } from 'react-native';
 import { useCallback, useEffect, useState } from 'react';
 import { TailwindProvider } from 'tailwindcss-react-native';
 import { NavigationContainer } from '@react-navigation/native';
