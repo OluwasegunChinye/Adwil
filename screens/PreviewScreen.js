@@ -82,7 +82,9 @@ const PreviewScreen = ({ route, navigation }) => {
                             <Text className="font-[poppins] text-center mt-4">
                                 {item.verses[5]}
                             </Text>
-                            {/* <Text className="font-[poppins] text-[10px] text-center mt-4 mx-14">
+                        </View>
+                        {/* <View className=" justify-end items-center">
+                            <Text className="font-[poppins] text-[10px] text-center mt-4 mx-14">
                                 Compilation of the songs and hymns in this
                                 edition was done by Adwil Media Services
                                 Publication
@@ -91,13 +93,13 @@ const PreviewScreen = ({ route, navigation }) => {
                                 &copy; Adwil Media Services
                             </Text>
                             <Text className="font-[poppins] text-[10px] text-center ">
-                                App built & designed by nuges😎
-                            </Text> */}
-                        </View>
+                                App designed & built by nuges😎
+                            </Text>
+                        </View> */}
                     </View>
                 )}
             />
-            <View className="flex-1 justify-end items-center mb-8">
+            <View className=" justify-end items-center mb-3">
                 <Text className="font-[poppins] text-[10px] text-center mt-4 mx-14">
                     Compilation of the songs and hymns in this edition was done
                     by Adwil Media Services Publication
@@ -106,7 +108,7 @@ const PreviewScreen = ({ route, navigation }) => {
                     &copy; Adwil Media Services
                 </Text>
                 <Text className="font-[poppins] text-[10px] text-center ">
-                    App built & designed by nuges😎
+                    App designed & built by nuges😎
                 </Text>
             </View>
         </SafeAreaView>

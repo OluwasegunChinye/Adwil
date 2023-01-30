@@ -32,12 +32,6 @@ const Refresh = () => {
 
     return (
         <View className="flex-1 justify-center items-center bg-[#030622]">
-            <Text className="font-[poppins] text-white text-sm">
-                It's ok to Refresh App once a while.
-            </Text>
-            {/* <Text className="font-[poppins] text-white text-sm">
-                But, you will loose all saved songs
-            </Text> */}
             <View className="my-16">
                 <Lottie
                     source={require('../assets/anime01.json')}
@@ -47,8 +41,11 @@ const Refresh = () => {
                     loop
                 />
             </View>
+            <Text className="font-[poppins] text-white text-sm my-5">
+                It's ok to Refresh App once a while.
+            </Text>
             <TouchableOpacity onPress={displayRefreshAlert}>
-                <Text className="font-[poppins] text-white">
+                <Text className="font-[poppins] text-white mt-5">
                     Click here to Refresh
                 </Text>
             </TouchableOpacity>
