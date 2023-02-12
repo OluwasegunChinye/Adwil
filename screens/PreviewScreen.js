@@ -5,12 +5,11 @@ import {
     FlatList,
     TouchableOpacity,
 } from 'react-native';
-import React, { useContext, useEffect, useLayoutEffect } from 'react';
+import React, { useContext, useLayoutEffect } from 'react';
 import { Ionicons } from '@expo/vector-icons';
 
 import { SONGS } from '../data/Songs';
 import { FavouritesContext } from '../store/context/favourite-context';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const PreviewScreen = ({ route, navigation }) => {
     const favouriteSongCtx = useContext(FavouritesContext);
@@ -83,27 +82,10 @@ const PreviewScreen = ({ route, navigation }) => {
                                 {item.verses[5]}
                             </Text>
                         </View>
-                        {/* <View className=" justify-end items-center">
-                            <Text className="font-[poppins] text-[10px] text-center mt-4 mx-14">
-                                Compilation of the songs and hymns in this
-                                edition was done by Adwil Media Services
-                                Publication
-                            </Text>
-                            <Text className="font-[poppins-bold] text-[10px] text-center ">
-                                &copy; Adwil Media Services
-                            </Text>
-                            <Text className="font-[poppins] text-[10px] text-center ">
-                                App designed & built by nuges😎
-                            </Text>
-                        </View> */}
                     </View>
                 )}
             />
             <View className=" justify-end items-center mb-3">
-                <Text className="font-[poppins] text-[10px] text-center mt-4 mx-14">
-                    Compilation of the songs and hymns in this edition was done
-                    by Adwil Media Services Publication
-                </Text>
                 <Text className="font-[poppins-bold] text-[10px] text-center ">
                     &copy; Adwil Media Services
                 </Text>

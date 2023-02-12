@@ -17,13 +17,13 @@ const FavouriteScreen = ({ navigation }) => {
 
     if (favouriteSongs.length === 0) {
         return (
-            <View className="flex-1 bg-[#030622]">
+            <SafeAreaView className="flex-1 bg-[#030622]">
                 <View className="mt-48">
                     <Animation
                         message={'Oops! You have no saved favourite songs'}
                     />
                 </View>
-            </View>
+            </SafeAreaView>
         );
     } else {
         return (

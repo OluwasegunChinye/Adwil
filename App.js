@@ -90,23 +90,10 @@ export default function App() {
         });
     }, []);
 
-    //to clear asyncstorage
-
-    const clearAll = async () => {
-        try {
-            await AsyncStorage.clear();
-        } catch (e) {
-            // clear error
-        }
-
-        console.log('cleared');
-    };
-
-    // clearAll();
 
     const [fontsLoaded] = useFonts({
         'poppins-bold': require('./assets/fonts/Poppins-Bold.ttf'),
-        'poppins': require('./assets/fonts/Poppins-Regular.ttf'),
+        poppins: require('./assets/fonts/Poppins-Regular.ttf'),
         'poppins-italic': require('./assets/fonts/Poppins-Italic.ttf'),
     });
 

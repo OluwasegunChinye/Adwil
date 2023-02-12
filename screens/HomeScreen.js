@@ -1,5 +1,12 @@
-import { View, SafeAreaView, TextInput, FlatList } from 'react-native';
+import {
+    View,
+    SafeAreaView,
+    TextInput,
+    FlatList,
+    TouchableOpacity,
+} from 'react-native';
 import React, { useState } from 'react';
+import { Ionicons } from '@expo/vector-icons';
 
 import { SONGS } from '../data/Songs';
 import Cards from '../components/Cards';
@@ -30,6 +37,8 @@ const HomeScreen = ({ navigation }) => {
             setSearch(text);
         }
     };
+
+   
     return (
         <>
             <SafeAreaView>
@@ -43,6 +52,15 @@ const HomeScreen = ({ navigation }) => {
                         value={search}
                         autoCorrect={false}
                     />
+                    <TouchableOpacity
+                        className="absolute right-8"
+                        onPress={() => {
+                            setSearch('');
+                            setFilteredDataSource(SONGS);
+                        }}
+                    >
+                        <Ionicons name="close" size={23} color="#B0BBBF" />
+                    </TouchableOpacity>
                 </View>
                 <View className="flex-1 bg-[#030622] h-5/6">
                     <FlatList
