@@ -37,7 +37,7 @@ const OnboardingScreen = () => {
                             className="w-72 h-72 object-contain"
                         />
                     ),
-                    title: 'Over 500+',
+                    title: 'Over 600+',
                     subtitle: 'Inspirational Praise and Worship Songs & Hymns',
                 },
                 {
