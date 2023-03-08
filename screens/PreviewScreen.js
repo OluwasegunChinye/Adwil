@@ -44,6 +44,19 @@ const PreviewScreen = ({ route, navigation }) => {
         });
     }, [navigation, favouriteSongHandler]);
 
+    const Footer = () => {
+        return (
+            <View className=" justify-end items-center mb-3">
+                <Text className="font-[poppins-bold] text-[10px] text-center ">
+                    &copy; Adwil Media Services
+                </Text>
+                <Text className="font-[poppins] text-[10px] text-center ">
+                    App designed & built by nuges😎
+                </Text>
+            </View>
+        );
+    };
+
     return (
         <SafeAreaView className="bg-[#C4CAFB] flex-1">
             <FlatList
@@ -84,15 +97,16 @@ const PreviewScreen = ({ route, navigation }) => {
                         </View>
                     </View>
                 )}
+                ListFooterComponent={Footer}
             />
-            <View className=" justify-end items-center mb-3">
+            {/* <View className=" justify-end items-center mb-3">
                 <Text className="font-[poppins-bold] text-[10px] text-center ">
                     &copy; Adwil Media Services
                 </Text>
                 <Text className="font-[poppins] text-[10px] text-center ">
                     App designed & built by nuges😎
                 </Text>
-            </View>
+            </View> */}
         </SafeAreaView>
     );
 };
