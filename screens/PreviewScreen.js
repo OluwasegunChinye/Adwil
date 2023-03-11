@@ -91,10 +91,10 @@ const PreviewScreen = ({ route, navigation }) => {
                             <Text className="font-[poppins] text-center mt-4">
                                 {item.verses[4]}
                             </Text>
-                            <Text className="font-[poppins] text-center mt-4">
-                                {item.verses[5]}
-                            </Text>
                         </View>
+                            <Text className="font-[poppins] text-center mt-4">
+                                {item.verses[6]}
+                            </Text>
                     </View>
                 )}
                 ListFooterComponent={Footer}
