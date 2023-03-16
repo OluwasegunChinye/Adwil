@@ -8,7 +8,7 @@ const OnboardingScreen = () => {
 
     const Done = ({ ...props }) => (
         <TouchableOpacity {...props}>
-            <Text style={{ fontSize: 16, marginHorizontal: 20, color: 'white' }}>Done</Text>
+            <Text style={{ fontSize: 16, marginHorizontal: 20, color: 'gray' }}>Done</Text>
         </TouchableOpacity>
     );
 
@@ -19,7 +19,7 @@ const OnboardingScreen = () => {
             DoneButtonComponent={Done}
             pages={[
                 {
-                    backgroundColor: '#030622',
+                    backgroundColor: '#EFEFEF',
                     image: (
                         <Image
                             source={require('../assets/images/one.png')}
@@ -30,7 +30,7 @@ const OnboardingScreen = () => {
                     subtitle: '',
                 },
                 {
-                    backgroundColor: '#6874E8',
+                    backgroundColor: '#EFEFEF',
                     image: (
                         <Image
                             source={require('../assets/images/two.png')}
@@ -41,14 +41,14 @@ const OnboardingScreen = () => {
                     subtitle: 'Inspirational Praise and Worship Songs & Hymns',
                 },
                 {
-                    backgroundColor: '#3BB273',
+                    backgroundColor: '#EFEFEF',
                     image: (
                         <Image
                             source={require('../assets/images/four.png')}
                             className="w-72 h-72 object-contain"
                         />
                     ),
-                    title: 'Download for free',
+                    title: 'Get started',
                     subtitle: 'No need to sign up or register',
                 },
             ]}

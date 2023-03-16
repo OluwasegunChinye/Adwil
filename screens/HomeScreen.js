@@ -42,9 +42,9 @@ const HomeScreen = ({ navigation }) => {
     return (
         <>
             <SafeAreaView>
-                <View className="flex-1 h-1/6 items-center justify-center bg-[#030622]">
+                <View className="flex-1 h-1/6 items-center justify-center bg-white">
                     <TextInput
-                        className="h-12 w-11/12 border text-sm rounded-md px-4 bg-white text-[#030622] font-[poppins] "
+                        className="h-12 w-11/12 text-sm border rounded-md px-4 bg-white font-[poppins] "
                         keyboardType="default"
                         placeholder=" type here to search for songs"
                         placeholderTextColor={'grey'}
@@ -62,7 +62,7 @@ const HomeScreen = ({ navigation }) => {
                         <Ionicons name="close" size={23} color="#B0BBBF" />
                     </TouchableOpacity>
                 </View>
-                <View className="flex-1 bg-[#030622] h-5/6">
+                <View className="flex-1 h-5/6 bg-white">
                     <FlatList
                         data={filteredDataSource}
                         keyExtractor={(item) => item.id}

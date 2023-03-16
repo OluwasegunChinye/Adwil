@@ -58,7 +58,7 @@ const PreviewScreen = ({ route, navigation }) => {
     };
 
     return (
-        <SafeAreaView className="bg-[#C4CAFB] flex-1">
+        <SafeAreaView className=" bg-white flex-1">
             <FlatList
                 data={previewSong}
                 keyExtractor={(item) => item.id}

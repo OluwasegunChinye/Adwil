@@ -15,7 +15,6 @@ function FavouritesProvider({ children }) {
     const findId = async () => {
         try {
             const result = await AsyncStorage.getItem('new_store');
-            console.log('saved id is  :', result);
             if (result !== null) {
                 setFavouriteSongIds(JSON.parse(result));
             }

@@ -4644,7 +4644,11 @@ export const SONGS = [
     {
         id: '204',
         title: 'Hear o Israel',
-        chorus: ['Hear o! Israel\n', 'The Lord thy God is one Lord\n', '(Repeat)\n'],
+        chorus: [
+            'Hear o! Israel\n',
+            'The Lord thy God is one Lord\n',
+            '(Repeat)\n',
+        ],
         scripture: 'Mark 12:29-30',
         verses: [
             [
@@ -4961,10 +4965,7 @@ export const SONGS = [
                 'Around the glassy sea\n',
                 'Cherubim and seraphim\n',
                 'Falling down before Thee\n',
-                'Who was, and is, and evermore shall be\n'
-            [
-                'Holy, holy, holy!'
-            ],
+                'Who was, and is, and evermore shall be\n'['Holy, holy, holy!'],
                 'Though the darkness hide Thee\n',
                 'Though the eye of sinful man\n',
                 'Thy glory may not see\n',
@@ -5829,7 +5830,7 @@ export const SONGS = [
                 'I hear a sound coming from the mountain\n',
                 'I hear it clearer each day\n',
                 'I hear a sound coming from the mountain\n',
-                'and it says,“Prepare ye the way.”\n'
+                'and it says,“Prepare ye the way.”\n',
             ],
             [
                 'I hear a voice coming from the mountain\n',
@@ -6659,7 +6660,10 @@ export const SONGS = [
     {
         id: '281',
         title: 'I will rejoice in you and be glad',
-        chorus: ['It is Jesus that’s in my heart (x3)\n', 'Jesus the Son of God\n'],
+        chorus: [
+            'It is Jesus that’s in my heart (x3)\n',
+            'Jesus the Son of God\n',
+        ],
         scripture: '',
         verses: [
             [
@@ -8282,7 +8286,7 @@ export const SONGS = [
                 'I’m learning to lean on Jesus\n',
                 'Finding a power than I’d ever dreamed\n',
                 'I’m learning to lean on Jesus\n',
-            ]
+            ],
         ],
     },
     {
@@ -9899,8 +9903,25 @@ export const SONGS = [
     },
     {
         id: '416',
-        title: 'No cross, no annointing',
-        chorus: [],
+        title: 'No cross no annointing',
+        chorus: [
+            'Solo: Do you believe that He is here?\n',
+            "All: Yes, He's here, yes He's here\n",
+            'Solo: If you believe that He can,He will touch you\n',
+            'All: He will touch you\n',
+            'Solo: If you believe that He can, He will hold you\n',
+            'All: He will hold you\n',
+            'Solo: If you believe that He can, He will heal you\n',
+            'All: He will heal you\n',
+            'Solo: If you believe that He can, He will bless you\n',
+            'All: He will bless you\n',
+            'Solo: If you believe that He can, He will touch you\n',
+            'All: He will touch you\n',
+            'Solo: If you believe that He can, He will lift you\n',
+            'All: He will lift you\n',
+            'Solo: If you believe that He can, He will save you\n',
+            'All: He will save you\n',
+        ],
         scripture: '',
         verses: [
             [
@@ -10503,7 +10524,10 @@ export const SONGS = [
     {
         id: '442',
         title: 'O Lord, your tenderness',
-        chorus: ['O Lord, I receive Your Love\n', 'O Lord, I receive Your Lord\n'],
+        chorus: [
+            'O Lord, I receive Your Love\n',
+            'O Lord, I receive Your Lord\n',
+        ],
         scripture: '',
         verses: [
             [
@@ -12316,7 +12340,7 @@ export const SONGS = [
             ],
             [
                 "He's the Head of all principality\n",
-                 "And all power is given unto Him\n",
+                'And all power is given unto Him\n',
                 'And in Him is the fullness\n',
                 'Of the Godhead bodily\n',
             ],
@@ -15996,7 +16020,7 @@ export const SONGS = [
                 'Hail the Lamb Who was slain for the world\n',
                 "Rule in power' And the earth will reply\n",
                 "'You shall reign as the King of all Kings\n",
-                "and the Lord of all lords\n",
+                'and the Lord of all lords\n',
             ],
             [
                 "There's a shield in our hand\n",

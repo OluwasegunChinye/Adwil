@@ -1,4 +1,4 @@
-import { View } from 'react-native';
+import { Platform, View } from 'react-native';
 import { useCallback, useEffect, useState } from 'react';
 import { TailwindProvider } from 'tailwindcss-react-native';
 import { NavigationContainer } from '@react-navigation/native';
@@ -29,7 +29,7 @@ export function TabNavigator() {
             // sceneContainerStyle={{ backgroundColor: 'transparent' }}
             screenOptions={{
                 headerShown: false,
-                tabBarLabelStyle: { color: '#030622' },
+                tabBarLabelStyle: { color: '' },
             }}
         >
             <Tab.Screen
@@ -90,7 +90,6 @@ export default function App() {
         });
     }, []);
 
-
     const [fontsLoaded] = useFonts({
         'poppins-bold': require('./assets/fonts/Poppins-Bold.ttf'),
         poppins: require('./assets/fonts/Poppins-Regular.ttf'),
@@ -113,28 +112,31 @@ export default function App() {
                 <FavouritesProvider>
                     <NavigationContainer>
                         <Stack.Navigator
-                            screenOptions={{
-                                // headerShown:
-                                //     Platform.OS === 'android' ? false : '',
-                                headerTitle: '',
-                                headerStyle: {
-                                    backgroundColor: '#030622',
-                                },
-                                headerTintColor: 'white',
-                            }}
+                        // screenOptions={{
+                        //     // headerShown: false,
+
+                        //     headerTintColor: 'white',
+                        //     headerTitle: '',
+                        // }}
                         >
                             {isFirstLaunched && (
                                 <Stack.Screen
                                     name="Onboarding"
                                     component={OnboardingScreen}
+                                    options={{
+                                        headerShown: false,
+                                        headerTitle: '',
+                                    }}
                                 />
                             )}
                             <Stack.Screen
                                 name="Tabs"
                                 component={TabNavigator}
                                 options={{
+                                    headerShown: Platform.OS === 'ios' ? false : null ,
+                                    headerTitle: '',
                                     headerStyle: {
-                                        backgroundColor: '#6874E8',
+                                        backgroundColor: 'white'
                                     },
                                 }}
                             />
@@ -145,8 +147,10 @@ export default function App() {
                                     presentation: 'modal',
                                     headerShown: true,
                                     headerStyle: {
-                                        backgroundColor: '#030622',
+                                        backgroundColor: '#292929',
                                     },
+                                    headerTintColor: 'white',
+                                    headerTitle:''
                                 }}
                             />
                         </Stack.Navigator>

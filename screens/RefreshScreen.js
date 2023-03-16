@@ -31,7 +31,7 @@ const Refresh = () => {
     };
 
     return (
-        <View className="flex-1 justify-center items-center bg-[#030622]">
+        <View className="flex-1 justify-center items-center bg-white">
             <View className="my-16">
                 <Lottie
                     source={require('../assets/anime01.json')}
@@ -41,11 +41,11 @@ const Refresh = () => {
                     loop
                 />
             </View>
-            <Text className="font-[poppins] text-white text-sm my-5">
+            <Text className="font-[poppins] text-[#030622] text-sm my-5">
                 It's ok to Refresh App once a while.
             </Text>
             <TouchableOpacity onPress={displayRefreshAlert}>
-                <Text className="font-[poppins] text-white mt-5">
+                <Text className="font-[poppins] text-[#030622] mt-5">
                     Click here to Refresh
                 </Text>
             </TouchableOpacity>

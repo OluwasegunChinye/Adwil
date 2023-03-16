@@ -13,11 +13,9 @@ const FavouriteScreen = ({ navigation }) => {
         favouriteSongCtx.favouriteSongIds.includes(songs.id)
     );
 
-    console.log('no of songs :', favouriteSongs.length);
-
     if (favouriteSongs.length === 0) {
         return (
-            <SafeAreaView className="flex-1 bg-[#030622]">
+            <SafeAreaView className="flex-1 bg-white">
                 <View className="mt-48">
                     <Animation
                         message={'Oops! You have no saved favourite songs'}
@@ -27,9 +25,9 @@ const FavouriteScreen = ({ navigation }) => {
         );
     } else {
         return (
-            <SafeAreaView className=" bg-[#030622]">
+            <SafeAreaView className=" bg-white">
                 <View className="flex-1 items-center justify-center h-1/6">
-                    <Text className="mt-2 font-[poppins] text-lg text-white ">
+                    <Text className="mt-2 font-[poppins] text-lg ">
                         Your favourite songs
                     </Text>
                 </View>
