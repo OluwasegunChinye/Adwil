@@ -38,15 +38,14 @@ const HomeScreen = ({ navigation }) => {
         }
     };
 
-   
     return (
         <>
             <SafeAreaView>
                 <View className="flex-1 h-1/6 items-center justify-center bg-white">
                     <TextInput
-                        className="h-12 w-11/12 text-sm border rounded-md px-4 bg-white font-[poppins] "
+                        className="h-12 w-11/12 text-xs border rounded-md px-4 bg-white font-[poppins] "
                         keyboardType="default"
-                        placeholder=" type here to search for songs"
+                        placeholder=" search for songs by the first line & not title"
                         placeholderTextColor={'grey'}
                         onChangeText={(text) => searchFilterFunction(text)}
                         value={search}

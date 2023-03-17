@@ -73,28 +73,28 @@ const PreviewScreen = ({ route, navigation }) => {
                             </Text>
                         </View>
                         <View>
-                            <Text className="font-[poppins] text-center">
+                            <Text className="font-[poppins] text-[12px] text-left">
                                 {item.verses[0]}
                             </Text>
-                            <Text className="font-[poppins-italic] text-center italic text-[#DB5461]">
+                            <Text className="font-[poppins] text-left text-[12px] text-[#DB5461]">
                                 {item.chorus}
                             </Text>
-                            <Text className="font-[poppins] text-center mt-4">
+                            <Text className="font-[poppins] text-left text-[12px] mt-4">
                                 {item.verses[1]}
                             </Text>
-                            <Text className="font-[poppins] text-center mt-4">
+                            <Text className="font-[poppins] text-left text-[12px] mt-4">
                                 {item.verses[2]}
                             </Text>
-                            <Text className="font-[poppins] text-center mt-4">
+                            <Text className="font-[poppins] text-left text-[12px] mt-4">
                                 {item.verses[3]}
                             </Text>
-                            <Text className="font-[poppins] text-center mt-4">
+                            <Text className="font-[poppins] text-left text-[12px] mt-4">
                                 {item.verses[4]}
                             </Text>
                         </View>
-                            <Text className="font-[poppins] text-center mt-4">
-                                {item.verses[6]}
-                            </Text>
+                        <Text className="font-[poppins] text-left text-[12px] mt-4">
+                            {item.verses[6]}
+                        </Text>
                     </View>
                 )}
                 ListFooterComponent={Footer}

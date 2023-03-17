@@ -6,8 +6,6 @@ const Refresh = () => {
     const handleRefresh = async () => {
         DevSettings.reload();
         await AsyncStorage.clear();
-
-        console.log('it was cleared');
     };
 
     const displayRefreshAlert = () => {
@@ -21,7 +19,6 @@ const Refresh = () => {
                 },
                 {
                     text: 'No Thanks',
-                    onPress: () => console.log('no thanks'),
                 },
             ],
             {

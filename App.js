@@ -133,11 +133,13 @@ export default function App() {
                                 name="Tabs"
                                 component={TabNavigator}
                                 options={{
-                                    headerShown: Platform.OS === 'ios' ? false : null ,
+                                    headerShown:
+                                        Platform.OS === 'ios' ? false : null,
                                     headerTitle: '',
                                     headerStyle: {
-                                        backgroundColor: 'white'
+                                        backgroundColor: 'white',
                                     },
+                                    headerShadowVisible: false,
                                 }}
                             />
                             <Stack.Screen
@@ -150,7 +152,7 @@ export default function App() {
                                         backgroundColor: '#292929',
                                     },
                                     headerTintColor: 'white',
-                                    headerTitle:''
+                                    headerTitle: '',
                                 }}
                             />
                         </Stack.Navigator>
