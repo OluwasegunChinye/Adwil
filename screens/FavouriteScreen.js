@@ -15,17 +15,15 @@ const FavouriteScreen = ({ navigation }) => {
 
     if (favouriteSongs.length === 0) {
         return (
-            <SafeAreaView className="flex-1 bg-white">
+            <SafeAreaView className="flex-1 bg-[#F9F6F0]">
                 <View className="mt-48">
-                    <Animation
-                        message={'Oops! You have no saved favourite songs'}
-                    />
+                    <Animation message={'Oops! You have no saved songs'} />
                 </View>
             </SafeAreaView>
         );
     } else {
         return (
-            <SafeAreaView className=" bg-white">
+            <SafeAreaView className=" bg-[#F9F6F0]">
                 <View className="flex-1 items-center justify-center h-1/6">
                     <Text className="mt-2 font-[poppins] text-lg ">
                         Your favourite songs

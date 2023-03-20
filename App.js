@@ -1,4 +1,4 @@
-import { Platform, View } from 'react-native';
+import { Platform, StatusBar, View } from 'react-native';
 import { useCallback, useEffect, useState } from 'react';
 import { TailwindProvider } from 'tailwindcss-react-native';
 import { NavigationContainer } from '@react-navigation/native';
@@ -115,7 +115,7 @@ export default function App() {
                         // screenOptions={{
                         //     // headerShown: false,
 
-                        //     headerTintColor: 'white',
+                        //     headerTintColor: '#F9F6F0',
                         //     headerTitle: '',
                         // }}
                         >
@@ -137,7 +137,7 @@ export default function App() {
                                         Platform.OS === 'ios' ? false : null,
                                     headerTitle: '',
                                     headerStyle: {
-                                        backgroundColor: 'white',
+                                        backgroundColor: '#F9F6F0',
                                     },
                                     headerShadowVisible: false,
                                 }}

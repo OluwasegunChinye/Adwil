@@ -4,8 +4,8 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Refresh = () => {
     const handleRefresh = async () => {
-        DevSettings.reload();
         await AsyncStorage.clear();
+        DevSettings.reload()
     };
 
     const displayRefreshAlert = () => {
@@ -28,7 +28,7 @@ const Refresh = () => {
     };
 
     return (
-        <View className="flex-1 justify-center items-center bg-white">
+        <View className="flex-1 justify-center items-center bg-[#F9F6F0]">
             <View className="my-16">
                 <Lottie
                     source={require('../assets/anime01.json')}
@@ -39,7 +39,7 @@ const Refresh = () => {
                 />
             </View>
             <Text className="font-[poppins] text-[#030622] text-sm my-5">
-                It's ok to Refresh App once a while.
+                It's ok to Refresh App once in a while.
             </Text>
             <TouchableOpacity onPress={displayRefreshAlert}>
                 <Text className="font-[poppins] text-[#030622] mt-5">

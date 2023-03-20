@@ -19,7 +19,7 @@ const OnboardingScreen = () => {
             DoneButtonComponent={Done}
             pages={[
                 {
-                    backgroundColor: '#EFEFEF',
+                    backgroundColor: '#F9F6F0',
                     image: (
                         <Image
                             source={require('../assets/images/one.png')}
@@ -30,7 +30,7 @@ const OnboardingScreen = () => {
                     subtitle: '',
                 },
                 {
-                    backgroundColor: '#EFEFEF',
+                    backgroundColor: '#F9F6F0',
                     image: (
                         <Image
                             source={require('../assets/images/two.png')}
@@ -41,7 +41,7 @@ const OnboardingScreen = () => {
                     subtitle: 'Inspirational Praise and Worship Songs & Hymns',
                 },
                 {
-                    backgroundColor: '#EFEFEF',
+                    backgroundColor: '#F9F6F0',
                     image: (
                         <Image
                             source={require('../assets/images/four.png')}
