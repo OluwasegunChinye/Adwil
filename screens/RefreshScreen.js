@@ -38,8 +38,8 @@ const Refresh = () => {
                     loop
                 />
             </View>
-            <Text className="font-[poppins] text-[#030622] text-sm my-5">
-                It's ok to Refresh App once in a while.
+            <Text className="font-[poppins] text-[#030622] text-sm my-5 mx-7 text-center">
+                To clear all your saved songs, click on refresh then close and reopen app
             </Text>
             <TouchableOpacity onPress={displayRefreshAlert}>
                 <Text className="font-[poppins] text-[#030622] mt-5">

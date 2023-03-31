@@ -8,7 +8,9 @@ const OnboardingScreen = () => {
 
     const Done = ({ ...props }) => (
         <TouchableOpacity {...props}>
-            <Text style={{ fontSize: 16, marginHorizontal: 20, color: 'gray' }}>Done</Text>
+            <Text style={{ fontSize: 16, marginHorizontal: 20, color: 'gray' }}>
+                Done
+            </Text>
         </TouchableOpacity>
     );
 
@@ -37,7 +39,7 @@ const OnboardingScreen = () => {
                             className="w-72 h-72 object-contain"
                         />
                     ),
-                    title: 'Over 600',
+                    title: 'Over 700',
                     subtitle: 'Inspirational Praise and Worship Songs & Hymns',
                 },
                 {
@@ -49,7 +51,7 @@ const OnboardingScreen = () => {
                         />
                     ),
                     title: 'Get started',
-                    subtitle: 'No need to sign up or register',
+                    subtitle: 'No need for internet connection',
                 },
             ]}
         />
